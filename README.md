@@ -1,0 +1,1 @@
+A self-implemented vector template class.
