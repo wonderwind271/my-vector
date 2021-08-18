@@ -9,6 +9,9 @@ int main() //testing code
     test1.push_back(86);
     cout<<test1.clear(2)<<endl;
     cout<<"size="<<test1.getSize()<<endl;
-    cout<<test1[3];
+    cout<<test1[3]<<endl;
+    test1.clear(1,1);
+    cout<<test1.getSize()<<" "<<test1[2]<<endl;
+
     return 0;
 }

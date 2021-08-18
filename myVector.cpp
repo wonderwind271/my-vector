@@ -128,6 +128,13 @@ void myVector<Type>::clear(int index, int nums)
     }
     else
     {
-        //Todo: implement the `clear`
+        int p1=index;
+        int p2=index+nums;
+        while (p2<size)
+        {
+            data[p1]=data[p2];
+            ++p2;++p1;
+        }
+        size-=nums;
     }
 }
