@@ -138,3 +138,30 @@ void myVector<Type>::clear(int index, int nums)
         size-=nums;
     }
 }
+
+template<typename Type>
+myVector<Type>::myVector(const myVector &a) {
+    cout<<"copy constructor is called"<<endl;//only test
+    size=a.size;
+    maxSpace=a.maxSpace;
+    data=new Type[maxSpace];
+    for (int i = 0; i < size; ++i)
+    {
+        data[i]=a.data[i];
+    }//deep copy
+}
+
+template<typename Type>
+myVector<Type>& myVector<Type>::operator=(const myVector &a) {
+    //free the memory, and then reallocate
+    cout<<"operator '=' has been overloaded"<<endl;//only test
+    delete[] data;
+    size=a.size;
+    maxSpace=a.maxSpace;
+    data=new Type[maxSpace];
+    for (int i = 0; i < size; ++i)
+    {
+        data[i]=a.data[i];
+    }//deep copy
+    return *this;
+}

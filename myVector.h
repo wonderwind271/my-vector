@@ -20,12 +20,16 @@ public:
     myVector();
     ~myVector();
     myVector(unsigned int nums,const Type& elem);
+    myVector(const myVector &a);//copy constructor
+    myVector& operator=(const myVector& a);
     Type& operator[](int index);
     void push_back(const Type& elem);
     Type pop();
     int getSize() const;
     Type clear(int index);
     void clear(int index, int length);
+
+
 
 };
 
