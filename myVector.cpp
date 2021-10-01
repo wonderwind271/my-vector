@@ -155,7 +155,7 @@ template<typename Type>
 myVector<Type>& myVector<Type>::operator=(const myVector &a) {
     //free the memory, and then reallocate
     cout<<"operator '=' has been overloaded"<<endl;//only test
-    //delete[] data;
+    delete[] data;
     size=a.size;
     maxSpace=a.maxSpace;
     data=new Type[maxSpace];
