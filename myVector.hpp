@@ -8,7 +8,7 @@
 #include <cmath>
 using std::cout;
 using std::endl;
-//using std::size_t;
+
 
 template<typename Type>
 class myVector
@@ -25,12 +25,12 @@ public:
     myVector(unsigned int nums,const Type& elem);
     myVector(const myVector &a);//copy constructor
     myVector& operator=(const myVector& a);
-    Type& operator[](int index);
-    void push_back(const Type& elem);
-    Type pop();
-    int getSize() const;
-    Type clear(int index);
-    void clear(int index, int length);
+    Type& operator[](int index);//get index
+    void push_back(const Type& elem);//add elem at the end of the vector
+    Type pop();//delete elem at the end of the vector
+    int getSize() const;//equal to size() in std::vector
+    Type clear(int index);//delete elem at index
+    void clear(int index, int nums);//delete [nums] of elem start from index and
 
 
 

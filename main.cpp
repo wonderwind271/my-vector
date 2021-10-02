@@ -1,3 +1,6 @@
+/*
+ * This is only a testing file that shows how the myVector works.
+ */
 #include "myVector.hpp"
 using namespace std;
 
@@ -13,7 +16,7 @@ int main() //testing code
     test1.clear(1,1);
     cout<<test1.getSize()<<" "<<test1[2]<<endl;
     myVector<int> testcopy;
-    auto testnew= (testcopy = test1);
+    auto testnew = (testcopy = test1);
     cout<<testcopy[0]<<endl;
     cout<<testnew[1]<<endl;
 
