@@ -1,7 +1,40 @@
-#include "myVector.h"
+//
+// Created by X1G8 on 2021/7/24.
+//
+
+#ifndef EXERCISE7_MYVECTOR_MYVECTOR_HPP
+#define EXERCISE7_MYVECTOR_MYVECTOR_HPP
+#include <iostream>
 #include <cmath>
 using std::cout;
 using std::endl;
+//using std::size_t;
+
+template<typename Type>
+class myVector
+{
+private:
+    Type* data;
+    int size;
+    int maxSpace;
+    void doubleSpace(); //should not be accessed by public
+
+public:
+    myVector();
+    ~myVector();
+    myVector(unsigned int nums,const Type& elem);
+    myVector(const myVector &a);//copy constructor
+    myVector& operator=(const myVector& a);
+    Type& operator[](int index);
+    void push_back(const Type& elem);
+    Type pop();
+    int getSize() const;
+    Type clear(int index);
+    void clear(int index, int length);
+
+
+
+};
 template<typename Type>
 void copyArray(Type* dist, Type* src, int nums)
 {
@@ -169,3 +202,7 @@ myVector<Type>& myVector<Type>::operator=(const myVector &a) {
     }//deep copy
     return *this;
 }
+
+
+
+#endif //EXERCISE7_MYVECTOR_MYVECTOR_HPP

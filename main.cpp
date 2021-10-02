@@ -1,4 +1,4 @@
-#include "myVector.cpp" // cannot include .h file because it's a template class.
+#include "myVector.hpp"
 using namespace std;
 
 int main() //testing code
