@@ -1,7 +1,3 @@
-//
-// Created by X1G8 on 2021/7/24.
-//
-
 #ifndef EXERCISE7_MYVECTOR_MYVECTOR_HPP
 #define EXERCISE7_MYVECTOR_MYVECTOR_HPP
 #include <iostream>
@@ -30,7 +26,7 @@ public:
     Type pop();//delete elem at the end of the vector
     int getSize() const;//equal to size() in std::vector
     Type clear(int index);//delete elem at index
-    void clear(int index, int nums);//delete [nums] of elem start from index and
+    void clear(int index, int nums);//delete [nums] of elem start from index
 
 
 
